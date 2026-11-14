@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ISBAT University | Student Registration</title>
+  <link rel="stylesheet" href="../styles/stylez.css">
+  <link rel="stylesheet" href="../pages/contact.html">
+  
+</head>
+<body>
+  <div style="background-color: red; color: aliceblue; text-align: center; position:sticky; top: 0; z-index: 1000;">
+      <section  style="display:flex; text-align:center; justify-content: center; background: #0c2342; color:red;">
+        <img src="../image/WhatsApp_Image_2026-11-13_at_10.28.18_AM-removebg-preview.png" alt="" srcset="" style="width:80px; color: aliceblue;" >
+        <div>
+            <h1>ISBAT University <br>student Registration Portal</h1>
+           
+        </div>
+    </section>
+  <nav style="background-color:red; color:black; text-align: center;word-spacing: 150px;" >
+    <a href="./index.html" style="text-decoration: none;">Home</a>
+    <a href="#female" style="text-decoration: none;">Programmes</a>
+    <a href="#Programme Details" style="text-decoration: none;">Contact</a>
+  </nav>
+  </div>
+
+  <main>
+    <form id="New student registration" method="post">
+      <h2>New student registration</h2>
+
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <div class="field">
+          <label for="fullname">Full name</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+
+        <div class="field">
+          <label for="studentid">Student ID</label>
+          <input type="text" id="studentid" name="studentid" required
+                 pattern="ISB-[0-9]{4}-[0-9]{4}"
+                 title="Use the format ISB-YYYY-NNNN, e.g. ISB-2026-0001"
+                 placeholder="ISB-2026-0001">
+          <span class="hint">Format: ISB-YYYY-NNNN</span>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" required
+                 pattern="07[0-9]{8}"
+                 title="Enter 10 digits starting with 07, e.g. 0771234567"
+                 placeholder="0771234567">
+          <span class="hint">Format: 07XXXXXXXX</span>
+        </div>
+
+        <div class="field">
+          <label for="dob">Date of birth</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <div class="field">
+          <span>Gender</span>
+          <label class="choice" for="male">
+            <input type="radio" id="male" name="gender" value="male" required> Male
+          </label>
+          <label class="choice" for="female">
+            <input type="radio" id="female" name="gender" value="female"> Female
+          </label>
+          <label class="choice" for="other">
+            <input type="radio" id="other" name="gender" value="other"> Other
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="nationality">Nationality</label>
+          <select id="nationality" name="nationality" required>
+            <option value="">Select nationality</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="South Sudan">South Sudan</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend id="male">Programme Details</legend>
+        <div class="field">
+          <label for="programme">Programme of study</label>
+          <select id="programme" name="programme" required>
+            <option value="">Select programme</option>
+            <option value="BIT">Bachelor of Information Technology</option>
+            <option value="BBA">Bachelor of Business Administration</option>
+            <option value="BSE">Bachelor of Software Engineering</option>
+            <option value="BCS">Bachelor of Computer Science</option>
+            <option value="BAF">Bachelor of Accounting and Finance</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Units</legend>
+        <p class="hint">Tick the units you wish to register for in Semester 1. You must tick at least one.</p>
+        <label class="choice" for="cu1"><input type="checkbox" id="cu1" name="units" value="CS101" required> CS101 Introduction to Programming</label>
+        <label class="choice" for="cu2"><input type="checkbox" id="cu2" name="units" value="IT102"> IT102 Web Development Fundamentals</label>
+        <label class="choice" for="cu3"><input type="checkbox" id="cu3" name="units" value="MA103"> MA103 Discrete Mathematics</label>
+        <label class="choice" for="cu4"><input type="checkbox" id="cu4" name="units" value="BU104"> BU104 Principles of Management</label>
+        <label class="choice" for="cu5"><input type="checkbox" id="cu5" name="units" value="CM105"> CM105 Communication Skills</label>
+        <label class="choice" for="cu6"><input type="checkbox" id="cu6" name="units" value="DB106"> DB106 Database Systems</label>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <section style="justify-content: center;text-align: center; " id="Programme Details">
+        <h2 >Contact the Registrar's Office</h2>
+        <address>
+          <p><strong>Address:</strong> ISBAT University, Kampala, Uganda</p>
+          <p><strong>Phone:</strong> <a href="tel:+256000000000">+256 000 000 000</a></p>
+          <p><strong>Email:</strong> <a href="mailto:registrar@isbat.example">registrar@isbat.example</a></p>
+          <p><strong>Office hours:</strong> Monday to Friday, 8:00 am to 5:00 pm</p>
+        </address>
+      </section>
+
+      <form  method="post">
+        <h2>Send us a message</h2>
+
+        <fieldset>
+          <legend>Your Details</legend>
+
+          <div class="field">
+            <label for="">Full name</label>
+            <input type="text"   required>
+          </div>
+
+          <div class="field">
+            <label for="cemail">Email address</label>
+            <input type="email" required>
+          </div>
+
+          <div class="field">
+            <label for="cphone">Phone number</label>
+            <input type="tel" id="cphone"  required
+                   pattern="07[0-9]{8}"
+                   title="Enter 10 digits starting with 07, e.g. 0771234567"
+                   placeholder="0771234567">
+            <span class="hint">Format: 07XXXXXXXX</span>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your Message</legend>
+
+          <div class="field">
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+              <option value="">Select a topic</option>
+              <option value="admissions">Admissions</option>
+              <option value="programmes">Programmes</option>
+              <option value="fees">Fees and payments</option>
+              <option value="technical">Portal technical issue</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+        </fieldset>
+
+        <div class="buttons">
+          <button type="submit">Send message</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+
+    </div>
+  
+
+  </main>
+
+
+   
+  <footer>
+    <p> 2026 ISBAT University. Registration No: 012250050</p>
+  </footer>
+</body>
+</html>
